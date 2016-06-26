@@ -1,13 +1,10 @@
 'use strict';
-
+var _ = require('lodash');
 function choose_multiples_of_three(collection) {
-  var mycollection = collection;
-  var result = [];
-  for(var i=0; i<mycollection.length; i++){
-    if(mycollection[i]%3 == 0){
-      result.push(mycollection[i]);
-    }
-  }
+  var result = _.filter(collection, function(n){
+    return n %3 == 0;
+  });
+
   return result;
 }
 

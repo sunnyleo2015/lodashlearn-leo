@@ -1,11 +1,11 @@
 'use strict';
+var _ = require('lodash');
 function map_to_even(collection){
-  //return [2,4,6,8,10];
-  var result = [];
-  for(var i=0; i<collection.length; i++){
-    result.push(collection[i]*2);
-  }
-
-  return result;
+    var result = _.map(collection,algorithm);
+    return result;
 }
 module.exports = map_to_even;
+
+function algorithm(n){
+    return n*2;
+}

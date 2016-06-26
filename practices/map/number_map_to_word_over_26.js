@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('lodash');
 var number_map_to_word_over_26 = function(collection){
   //return ['a','m','aa','ad','y','aa'];
   var result = [];
@@ -23,11 +24,10 @@ var number_map_to_word_over_26 = function(collection){
     }
   }
 
-  for(var j=0; j<collection.length; j++){
-    result.push(i2s(collection[j]));
-  }
+  result = _.map(collection,i2s);
 
   return result;
+
 };
 
 module.exports = number_map_to_word_over_26;

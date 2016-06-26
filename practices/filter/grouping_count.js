@@ -1,18 +1,8 @@
 'use strict';
-
+var _ = require('lodash');
 function grouping_count(collection) {
-  var mycollection ={};
-
-  collection.forEach(function (col){
-    if (!mycollection[col]){
-      mycollection[col] = 1;
-    }
-    else{
-      mycollection[col]++;
-    }
-  });
-
-  return mycollection;
+  var result = _.countBy(collection);
+  return result;
 }
 
 module.exports = grouping_count;

@@ -1,13 +1,9 @@
-'use strict';
-
+var _ = require('lodash');
 function choose_even(collection) {
-  var mycollection = collection;
-  var result = [];
-  for(var i=0; i<mycollection.length; i++){
-    if(mycollection[i]%2 == 0){
-      result.push(mycollection[i]);
-    }
-  }
+  var result = _.filter(collection, function(n){
+    return n %2 == 0;
+  });
+
   return result;
 }
 
