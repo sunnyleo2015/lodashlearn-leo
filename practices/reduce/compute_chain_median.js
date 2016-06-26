@@ -1,14 +1,13 @@
 'use strict';
-
+var _ = require('lodash');
 function compute_chain_median(collection) {
   //在这里写入代码
     var result = 0;
     var mycollection = collection.split('->');
-    var temp = 0;
-    var newArray = mycollection.sort(function(a, b) {
-        return a - b;
-
+    var intcollection  = mycollection.map(function(event){
+      return parseInt(event)
     });
+    var newArray = _.sortBy(intcollection);
 
 
     if(newArray.length%2 == 0){

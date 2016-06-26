@@ -1,8 +1,8 @@
 'use strict';
-
+var _ = require('lodash');
 function collect_min_number(collection) {
   //在这里写入代码
-    var result = Math.min.apply(null, collection);
+    var result = _.min(collection);
     return result;
 }
 

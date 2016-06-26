@@ -1,14 +1,9 @@
 'use strict';
-
+var _ = require('lodash');
 function compute_median(collection) {
   //在这里写入代码
     var result = 0;
-    var mycollection = collection;
-    var temp = 0;
-    var newArray = mycollection.sort(function(a, b) {
-        return a - b;
-
-    });
+    var newArray = _.sortBy(collection);
 
 
     if(newArray.length%2 == 0){

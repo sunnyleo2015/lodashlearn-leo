@@ -1,9 +1,8 @@
 'use strict';
-
+var _ = require('lodash');
 function collect_max_number(collection) {
   //在这里写入代码
-    var result = Math.max.apply(null, collection);
-
+    var result = _.max(collection);
     return result;
 }
 
