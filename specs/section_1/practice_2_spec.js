@@ -1,5 +1,5 @@
 'use strict';
-
+var _ = require('lodash');
 var collect_same_elements = require("../../practices/section_1/practice_2/practice.js");
 
 describe('practice-1-2', function() {
